@@ -19,9 +19,12 @@ canvas.height = height;
 // ============================================================
 const leaderEl = document.getElementById('leader');
 const leaderCanvas = document.getElementById('leader-canvas');
-const leaderCtx = leaderCanvas.getContext('2d');
-leaderCanvas.width = window.innerWidth;
-leaderCanvas.height = window.innerHeight;
+const leaderCtx = leaderCanvas ? leaderCanvas.getContext('2d') : null;
+// only set canvas size if leader canvas exists (it doesn't on portfolio.html)
+if (leaderCanvas) {
+  leaderCanvas.width = window.innerWidth;
+  leaderCanvas.height = window.innerHeight;
+}
 
 // ============================================================
 // GRAIN SETTINGS
@@ -101,6 +104,69 @@ window.addEventListener('resize', () => {
   canvas.width = width;
   canvas.height = height;
 });
+
+// ============================================================
+// FLASH CUT — briefly flashes white then swaps background
+// gives the ViewMaster mechanical snap feel
+// ============================================================
+function flashCut(newPhoto) {
+  const flash = document.getElementById('flash');
+  const bg = document.getElementById('section-bg');
+
+  // flash white
+  flash.style.opacity = '1';
+
+  setTimeout(() => {
+    // swap photo while screen is white
+    bg.style.backgroundImage = `url(${newPhoto})`;
+    // fade flash out
+    flash.style.opacity = '0';
+  }, 150);
+}
+
+// ============================================================
+// INTERSECTION OBSERVER — watches which section is visible
+// swaps background photo and highlights nav link accordingly
+// ============================================================
+function initObserver() {
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+
+        // swap background photo with flash cut
+        if (sectionPhotos[id]) {
+          flashCut(sectionPhotos[id]);
+        }
+
+        // update active nav link
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // observe every section
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+}
+
+// ============================================================
+// NAV CLICKS — smooth scroll to section on click
+// ============================================================
+function initNav() {
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById(link.getAttribute('href').slice(1));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
 
 // ============================================================
 // LEADER — draws each numbered frame onto the leader canvas
@@ -292,14 +358,29 @@ function endIntro() {
   intro.style.opacity = '0';
   if (prompt) prompt.style.opacity = '0';
 
-  // after fade completes, hide intro and start main content
+  // after fade completes navigate to portfolio
   setTimeout(() => {
-    intro.style.display = 'none';
-    localStorage.setItem('visited', 'true');
-    if (prompt) prompt.remove();
-    newImg();
-    setInterval(newImg, 4000);
-  }, 1000);
+  intro.style.display = 'none';
+  if (prompt) prompt.remove();
+  localStorage.setItem('completed', 'true');
+
+  // flash white then navigate
+  const flash = document.createElement('div');
+  flash.style.cssText = `
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  `;
+  document.body.appendChild(flash);
+  setTimeout(() => flash.style.opacity = '1', 50);
+  setTimeout(() => {
+    window.location.href = 'portfolio.html';
+  }, 300);
+
+}, 1000);
 }
 
 // ============================================================
@@ -332,20 +413,28 @@ function showSkip() {
     document.removeEventListener('click', skipHandler);
     skipped = true;
     skip.remove();
-    // hide leader and intro in case either is visible
-    leaderEl.style.display = 'none';
-    const intro = document.getElementById('intro');
-    if (intro) intro.style.display = 'none';
-    // go straight to main content
-    newImg();
-    setInterval(newImg, 4000);
+    localStorage.setItem('completed', 'true');
+    const flash = document.createElement('div');
+    flash.style.cssText = `
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      z-index: 99999;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    `;
+    document.body.appendChild(flash);
+    setTimeout(() => flash.style.opacity = '1', 50);
+    setTimeout(() => {
+      window.location.href = 'portfolio.html';
+    }, 300);
   };
 
-  document.addEventListener('keydown', skipHandler);
-  document.addEventListener('click', skipHandler);
+      document.addEventListener('keydown', skipHandler);
+      document.addEventListener('click', skipHandler);
 
-  // leader still plays for returning visitors
-  playLeader();
+      // leader still plays for returning visitors
+      playLeader();
 }
 
 // ============================================================
@@ -387,8 +476,89 @@ const newImg = () => {
 // KICK OFF — start the leader, everything else chains from it
 // Checks if the user has already seen the intro in this session and skips it if so
 // ============================================================
-if (localStorage.getItem('visited')) {
-  showSkip();
-} else {
-  playLeader();
+if (document.getElementById('leader')) {
+  if (localStorage.getItem('completed')) {
+    showSkip();
+  } else {
+    playLeader();
+  }
+}
+
+// ============================================================
+// PORTFOLIO INIT — only runs on portfolio.html
+// ============================================================
+if (document.getElementById('film-strip')) {
+
+  const sectionPhotos = {
+    about:      './assets/images/about.jpg',
+    projects:   './assets/images/steam_train.jpg',
+    resume:     './assets/images/factory.jpg',
+    contact:    './assets/images/telegraph_key.jpg',
+    leadership: './assets/images/theatre.jpg',
+    business:   './assets/images/streets.jpg',
+    career:     './assets/images/lighthouse.jpg'
+  };
+
+  // reveal content panel with slide up animation
+  function showPanel(id) {
+    document.querySelectorAll('.content-panel').forEach(panel => {
+      panel.classList.remove('active');
+      const inner = panel.querySelector('.panel-inner');
+      if (inner) {
+        inner.classList.remove('visible');
+      }
+    });
+
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+      // slight delay so transition fires
+      setTimeout(() => {
+        const inner = target.querySelector('.panel-inner');
+        if (inner) inner.classList.add('visible');
+      }, 50);
+    }
+  }
+
+  // flash cut then swap background and show new panel
+  function switchSection(id) {
+    const flash = document.getElementById('flash');
+    const bg = document.getElementById('section-bg');
+
+    // update active film frame
+    document.querySelectorAll('.film-frame').forEach(frame => {
+      frame.classList.remove('active');
+    });
+    const activeFrame = document.querySelector(`.film-frame[data-section="${id}"]`);
+    if (activeFrame) activeFrame.classList.add('active');
+
+    // flash white
+    flash.style.opacity = '1';
+
+    setTimeout(() => {
+      // swap background
+      if (sectionPhotos[id]) {
+        bg.style.backgroundImage = `url(${sectionPhotos[id]})`;
+      }
+      // show new panel
+      showPanel(id);
+      // fade flash out
+      flash.style.opacity = '0';
+    }, 150);
+  }
+
+  // wire up film frame clicks
+  document.querySelectorAll('.film-frame').forEach(frame => {
+    frame.addEventListener('click', () => {
+      const id = frame.getAttribute('data-section');
+      switchSection(id);
+    });
+  });
+
+  // show first panel on load
+  setTimeout(() => {
+    const inner = document.querySelector('#about .panel-inner');
+    if (inner) inner.classList.add('visible');
+  }, 100);
+
 }

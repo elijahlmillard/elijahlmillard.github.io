@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elijah Millard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="css/portfolio.css"> -->
+</head>
+<body>
+
+  <!-- Grain filter canvas — runs over everything -->
+  <canvas id="filter"></canvas>
+
+  <!-- Flash cut overlay -->
+  <div id="flash"></div>
+
+  <!-- Fixed background photo -->
+  <div id="section-bg"></div>
+
+  <!-- Film strip navigation -->
+  <nav id="film-strip">
+
+    <!-- Header label -->
+    <div id="film-header">
+      <span>ELIJAHM1</span>
+      <span>REEL 01</span>
+    </div>
+
+    <!-- Sprocket holes top -->
+    <div class="sprockets">
+      <div class="sprocket"></div>
+      <div class="sprocket"></div>
+      <div class="sprocket"></div>
+    </div>
+
+    <!-- Film frames / section tabs -->
+    <ul id="film-frames">
+      <li class="film-frame active" data-section="about">
+        <span class="frame-number">01</span>
+        <span class="frame-label">ABOUT ME</span>
+      </li>
+      <li class="film-frame" data-section="projects">
+        <span class="frame-number">02</span>
+        <span class="frame-label">PROJECTS</span>
+      </li>
+      <li class="film-frame" data-section="resume">
+        <span class="frame-number">03</span>
+        <span class="frame-label">RESUME</span>
+      </li>
+      <li class="film-frame" data-section="contact">
+        <span class="frame-number">04</span>
+        <span class="frame-label">CONTACT</span>
+      </li>
+      <li class="film-frame" data-section="leadership">
+        <span class="frame-number">05</span>
+        <span class="frame-label">LEADERSHIP</span>
+      </li>
+      <li class="film-frame" data-section="business">
+        <span class="frame-number">06</span>
+        <span class="frame-label">BUSINESS</span>
+      </li>
+      <li class="film-frame" data-section="career">
+        <span class="frame-number">07</span>
+        <span class="frame-label">CAREER</span>
+      </li>
+    </ul>
+
+    <!-- Sprocket holes bottom -->
+    <div class="sprockets">
+      <div class="sprocket"></div>
+      <div class="sprocket"></div>
+      <div class="sprocket"></div>
+    </div>
+
+  </nav>
+
+  <!-- Main content area -->
+  <main id="content-area">
+
+    <!-- Outline that redraws on section change -->
+    <div id="content-outline"></div>
+
+    <!-- Section panels — only active one is visible -->
+    <section id="about" class="content-panel active">
+      <div class="panel-inner">
+        <h2>ABOUT ME</h2>
+        <p>Placeholder about me content.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="content-panel">
+      <div class="panel-inner">
+        <h2>PROJECTS</h2>
+        <p>Placeholder projects content.</p>
+      </div>
+    </section>
+
+    <section id="resume" class="content-panel">
+      <div class="panel-inner">
+        <h2>RESUME</h2>
+        <p>Placeholder resume content.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="content-panel">
+      <div class="panel-inner">
+        <h2>CONTACT</h2>
+        <p>Placeholder contact content.</p>
+      </div>
+    </section>
+
+    <section id="leadership" class="content-panel">
+      <div class="panel-inner">
+        <h2>LEADERSHIP</h2>
+        <p>Placeholder leadership content.</p>
+      </div>
+    </section>
+
+    <section id="business" class="content-panel">
+      <div class="panel-inner">
+        <h2>BUSINESS</h2>
+        <p>Placeholder business content.</p>
+      </div>
+    </section>
+
+    <section id="career" class="content-panel">
+      <div class="panel-inner">
+        <h2>CAREER</h2>
+        <p>Placeholder career content.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
