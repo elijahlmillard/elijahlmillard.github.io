@@ -33,3 +33,71 @@ background-position: center;
   width: 100%;
   height: 100%;
 }
+
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: none;
+  overflow: hidden;
+}
+
+#intro-photo {
+  position: absolute;
+  object-position: center 20%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.9) blur(1px) brightness(0.5) contrast(1.1);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+#intro-top {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#intro-label {
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  color: hsl(51, 12%, 78%);
+  opacity: 0;
+}
+
+#intro-name {
+  font-family: monospace;
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  opacity: 0;
+  text-shadow: 0 0 40px #fff;
+}
+
+#intro-summary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 20%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: transform 1.5s ease;
+  z-index: 1;
+}
+
+#intro-summary p {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: hsl(51, 12%, 78%);
+  letter-spacing: 0.05em;
+}
