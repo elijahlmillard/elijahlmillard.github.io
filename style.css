@@ -212,7 +212,7 @@ body {
   background-position: center;
   filter: sepia(0.9) blur(1px) brightness(0.4) contrast(1.1);
   z-index: 0;
-  background-image: url('./assets/images/about.jpg');
+  /* background-image: url('./assets/images/about.jpg'); */
 }
 
 /* ============================================================

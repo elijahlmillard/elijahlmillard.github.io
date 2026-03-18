@@ -556,9 +556,11 @@ if (document.getElementById('film-strip')) {
   });
 
   // show first panel on load
-  setTimeout(() => {
+   setTimeout(() => {
     const inner = document.querySelector('#about .panel-inner');
     if (inner) inner.classList.add('visible');
+    const bg = document.getElementById('section-bg');
+    bg.style.backgroundImage = `url(assets/images/about.jpg)`;
   }, 100);
 
 }
