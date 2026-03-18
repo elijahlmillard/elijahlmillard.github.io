@@ -177,28 +177,16 @@ section {
 }
 
 /* ============================================================
-   BACKGROUND PHOTO — sits behind each section
-   ============================================================ */
-#section-bg {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: sepia(0.9) blur(1px) brightness(0.5) contrast(1.1);
-  z-index: 0;
-  display: none;
-}
-
-/* ============================================================
    FLASH CUT — white overlay for section transitions
    ============================================================ */
 #flash {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 130px;
+  right: 0;
+  bottom: 0;
   background: #fff;
-  z-index: 9998;
+  z-index: 99999;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.1s ease;
@@ -225,19 +213,6 @@ body {
   filter: sepia(0.9) blur(1px) brightness(0.4) contrast(1.1);
   z-index: 0;
   background-image: url('./assets/images/about.jpg');
-}
-
-/* ============================================================
-   FLASH CUT OVERLAY
-   ============================================================ */
-#flash {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  z-index: 99999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.1s ease;
 }
 
 /* ============================================================
@@ -366,18 +341,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* ============================================================
-   CONTENT OUTLINE — animated border around main area
-   ============================================================ */
-#content-outline {
-  position: absolute;
-  inset: 20px;
-  border: 1px solid #a09880;
-  pointer-events: none;
-  z-index: 101;
-  opacity: 0.4;
 }
 
 /* ============================================================
