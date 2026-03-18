@@ -490,11 +490,11 @@ if (document.getElementById('leader')) {
 if (document.getElementById('film-strip')) {
 
   const sectionPhotos = {
-    about:      './assets/images/about.jpg',
-    projects:   './assets/images/steam_train.jpg',
-    resume:     './assets/images/factory.jpg',
+    about:      'assets/images/about.jpg',
+    projects:   'assets/images/steam_train.jpg',
+    resume:     'assets/images/factory.jpg',
     contact:    'assets/images/telegraph_key.jpg',
-    leadership: 'assets/images/theatre.jpg',
+    leadership: 'assets/images/theatre.JPG',
     business:   'assets/images/streets.jpg',
     career:     'assets/images/lighthouse.jpg'
   };
