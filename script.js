@@ -496,7 +496,7 @@ if (document.getElementById('film-strip')) {
     contact:    'assets/images/telegraph_key.jpg',
     leadership: 'assets/images/theatre.JPG',
     business:   'assets/images/streets.jpg',
-    career:     'assets/images/lighthouse.jpg'
+    career:     'assets/images/Lighthouse.jpg'
   };
 
   // reveal content panel with slide up animation
