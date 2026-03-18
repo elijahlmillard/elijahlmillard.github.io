@@ -6,7 +6,7 @@ Live site: [elijahlmillard.github.io](https://elijahlmillard.github.io)
 
 ## About
 
-This is the personal developer portfolio of [YOUR NAME], a technically driven problem solver with strong systems thinking and communication skills. Passionate about understanding complex systems and applying creative precision to technical challenges. Currently looking to enter the world of maintaining and modernizing legacy systems.
+This is the personal developer portfolio of Elijah Millard, a technically driven problem solver with strong systems thinking and communication skills. Passionate about understanding complex systems and applying creative precision to technical challenges. Currently looking to enter the world of maintaining and modernizing legacy systems.
 
 ---
 
@@ -92,6 +92,6 @@ COBOL programs are available live on PUB400 under library `ELIJAHM1`.
 
 ## Contact
 
-[Your email]  
-[Your LinkedIn]  
+elijahlmillard@gmail.com  
+[My LinkedIn](https://www.linkedin.com/in/elijahmillard)
 [github.com/elijahlmillard](https://github.com/elijahlmillard)
