@@ -1,4 +1,4 @@
-# [YOUR NAME] — Developer Portfolio
+# Elijah Millard - Developer Portfolio
 
 Live site: [elijahlmillard.github.io](https://elijahlmillard.github.io)
 
