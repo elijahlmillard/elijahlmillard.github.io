@@ -1,3 +1,93 @@
+ /* ============================================================ */
+ /* test  */
+/*  ============================================================ */
+
+/* ============================================================
+   ABOUT ME SECTION
+   ============================================================ */
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-eyebrow {
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  color: #a09880;
+}
+
+.about-name {
+  font-family: monospace;
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+  color: #f5f0e8;
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-tagline {
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #a09880;
+}
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  background: #2a2a2a;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-lead {
+  font-family: monospace;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f5f0e8;
+  letter-spacing: 0.03em;
+  font-style: italic;
+}
+
+.about-body p {
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: #c8b99a;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.about-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-tag {
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: #a09880;
+  border: 1px solid #2a2a2a;
+  padding: 6px 12px;
+}
+
+/* Main */
 body {
     background-color: #000;
     margin: 0;
@@ -350,9 +440,9 @@ body {
   position: absolute;
   inset: 0;
   display: none;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 60px;
+  padding: 40px 60px;
 }
 
 .content-panel.active {
