@@ -1,0 +1,676 @@
+ /* ============================================================ */
+ /* test  */
+/*  ============================================================ */
+/* ============================================================
+   CAREER TIMELINE
+   ============================================================ */
+.timeline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+}
+
+.timeline-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 12px;
+}
+
+.timeline-node {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #a09880;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.timeline-connector {
+  flex: 0 0 40px;
+  height: 1px;
+  background: #2a2a2a;
+  margin-top: 5px;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.timeline-label {
+  font-family: monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: #444;
+}
+
+.timeline-title {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #f5f0e8;
+  font-weight: 400;
+  margin: 0;
+}
+
+.timeline-desc {
+  font-family: monospace;
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: #a09880;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* ============================================================
+   CERTIFICATION CHIPS
+   ============================================================ */
+.cert-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cert-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid #2a2a2a;
+  padding: 12px 20px;
+}
+
+.cert-status {
+  font-family: monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: #a09880;
+}
+
+.cert-name {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #f5f0e8;
+}
+
+/* ============================================================
+   MOBILE — stack timeline vertically
+   ============================================================ */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .timeline-stage {
+    flex-direction: row;
+    align-items: flex-start;
+    flex: unset;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .timeline-connector {
+    width: 1px;
+    height: 30px;
+    flex: unset;
+    margin-top: 0;
+    margin-left: 4px;
+  }
+
+  .timeline-content {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+
+/* ============================================================
+   RESUME SECTION
+   ============================================================ */
+.resume-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.resume-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-label {
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  color: #a09880;
+}
+
+.resume-text {
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #c8b99a;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.resume-btn {
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #f5f0e8;
+  border: 1px solid #a09880;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.resume-btn:hover {
+  color: #fff;
+  border-color: #f5f0e8;
+}
+
+/* ============================================================
+   ABOUT ME SECTION
+   ============================================================ */
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-eyebrow {
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  color: #a09880;
+}
+
+.about-name {
+  font-family: monospace;
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+  color: #f5f0e8;
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-tagline {
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #a09880;
+}
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  background: #2a2a2a;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-lead {
+  font-family: monospace;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f5f0e8;
+  letter-spacing: 0.03em;
+  font-style: italic;
+}
+
+.about-body p {
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: #c8b99a;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.about-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-tag {
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: #a09880;
+  border: 1px solid #2a2a2a;
+  padding: 6px 12px;
+}
+
+/* Main */
+body {
+    background-color: #000;
+    margin: 0;
+}
+#filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+		z-index:10000;
+    pointer-events:none;
+}
+#img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+		filter:  sepia(0.9) blur(1px) brightness(0.7) contrast(1.1);
+		/* background-image: url(https://picsum.photos/2000.webp); */
+    background-image: url('./assets/images/cover_photo.jpg');
+background-position: center;
+	transition: opacity 1s steps(24), background-position 20s steps(480);
+	background-size: cover;
+  opacity:0;
+}
+
+#leader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+}
+
+#leader-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: none;
+  overflow: hidden;
+}
+
+#intro-photo {
+  position: absolute;
+  object-position: center 20%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.9) blur(1px) brightness(0.5) contrast(1.1);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+#intro-top {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#intro-label {
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  color: hsl(51, 12%, 78%);
+  opacity: 0;
+}
+
+#intro-name {
+  font-family: monospace;
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  opacity: 0;
+  text-shadow: 0 0 40px #fff;
+}
+
+#intro-summary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 20%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: transform 1.5s ease;
+  z-index: 1;
+}
+
+#intro-summary p {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: hsl(51, 12%, 78%);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   MAIN PORTFOLIO — hidden until intro ends
+   ============================================================ */
+#portfolio {
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* each section fills the full screen */
+section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* content sits above the background photo */
+.section-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.section-content h2 {
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  color: #a09880;
+  margin-bottom: 40px;
+}
+
+/* ============================================================
+   SIDE NAVIGATION
+   ============================================================ */
+#film-nav {
+  display: none;
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10001;
+}
+
+#film-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#film-nav a {
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #a09880;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#film-nav a:hover {
+  color: #f5f0e8;
+}
+
+#film-nav a.active {
+  color: #f5f0e8;
+}
+
+/* ============================================================
+   FLASH CUT — white overlay for section transitions
+   ============================================================ */
+#flash {
+  position: fixed;
+  top: 0;
+  left: 130px;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+/* ============================================================
+   PORTFOLIO BASE
+   ============================================================ */
+body {
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+}
+
+/* ============================================================
+   BACKGROUND PHOTO
+   ============================================================ */
+#section-bg {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: sepia(0.9) blur(1px) brightness(0.4) contrast(1.1);
+  z-index: 0;
+  /* background-image: url('./assets/images/about.jpg'); */
+}
+
+/* ============================================================
+   FILM STRIP — left navigation
+   ============================================================ */
+#film-strip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 100vh;
+  background: #0a0a0a;
+  border-right: 2px solid #2a2a2a;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ============================================================
+   FILM HEADER LABEL
+   ============================================================ */
+#film-header {
+  width: 100%;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+#film-header span {
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: #a09880;
+  text-align: center;
+}
+
+/* ============================================================
+   SPROCKET HOLES
+   ============================================================ */
+.sprockets {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0;
+}
+
+.sprocket {
+  width: 14px;
+  height: 10px;
+  background: #000;
+  border: 1px solid #2a2a2a;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   FILM FRAMES
+   ============================================================ */
+#film-frames {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.film-frame {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-bottom: 1px solid #2a2a2a;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.film-frame:hover {
+  background: #111;
+}
+
+.film-frame.active {
+  background: #111;
+  outline: 1px solid #a09880;
+  outline-offset: -4px;
+}
+
+.frame-number {
+  font-family: monospace;
+  font-size: 0.5rem;
+  color: #444;
+  letter-spacing: 0.1em;
+}
+
+.frame-label {
+  font-family: monospace;
+  font-size: 0.55rem;
+  color: #a09880;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.film-frame.active .frame-label {
+  color: #f5f0e8;
+}
+
+/* ============================================================
+   MAIN CONTENT AREA
+   ============================================================ */
+#content-area {
+  position: fixed;
+  left: 130px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   CONTENT PANELS — only active panel is visible
+   ============================================================ */
+.content-panel {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 60px;
+}
+
+.content-panel.active {
+  display: flex;
+}
+
+/* ============================================================
+   PANEL INNER — content slides up on reveal
+   ============================================================ */
+.panel-inner {
+  position: relative;
+  z-index: 102;
+  max-width: 700px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.panel-inner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.panel-inner h2 {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: #a09880;
+  margin-bottom: 32px;
+}
+
+.panel-inner p {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #c8b99a;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   GRAIN CANVAS — sits over everything
+   ============================================================ */
+#filter {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.4;
+}

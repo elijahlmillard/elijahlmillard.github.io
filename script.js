@@ -495,7 +495,7 @@ if (document.getElementById('film-strip')) {
     resume:     'assets/images/factory.jpg',
     contact:    'assets/images/telegraph_key.jpg',
     leadership: 'assets/images/theatre.jpg',
-    business:   'assets/images/streets.jpg',
+    // business:   'assets/images/streets.jpg',
     career:     'assets/images/lighthouse.jpg'
   };
 
