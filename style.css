@@ -695,6 +695,84 @@ body {
   background: #0f0f0f;
   display: block;
 }
+ 
+/* ============================================================
+   LIGHTBOX — full screen image overlay on click
+   ============================================================ */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 999999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+ 
+#lightbox.open {
+  display: flex;
+}
+ 
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 1px solid #2a2a2a;
+  display: block;
+}
+ 
+#lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #b8a898;
+  cursor: pointer;
+}
+ 
+.screenshot-hint {
+  font-family: monospace;
+  font-size: 0.45rem;
+  letter-spacing: 0.3em;
+  color: #3a3a3a;
+  margin-top: -8px;
+}
+ 
+/* ============================================================
+   PROJECT SCREENSHOTS — thumbnails that open lightbox
+   ============================================================ */
+.project-screenshot {
+  flex: 1;
+  height: 90px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid #2a2a2a;
+  display: block;
+  cursor: pointer;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+ 
+.project-screenshot:hover {
+  border-color: #b8a898;
+  opacity: 0.85;
+}
+ 
+/* ============================================================
+   CLEARLEDGER VIDEO — full content width
+   ============================================================ */
+.demo-video-wrap {
+  width: 100%;
+}
+ 
+.project-video {
+  width: 100%;
+  border: 1px solid #2a2a2a;
+  background: #0f0f0f;
+  display: block;
+}
 
 /* ============================================================
    CAREER TIMELINE
