@@ -543,26 +543,135 @@ body {
 /* ============================================================
    PROJECTS SECTION
    ============================================================ */
-.project-item {
-  margin-bottom: 32px;
+.project-nav {
+  display: flex;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 24px;
 }
-
-.project-item h3 {
+ 
+.project-tab {
+  flex: 1;
+  padding: 14px 16px;
+  cursor: pointer;
+  border-right: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 0.15s;
+}
+ 
+.project-tab:last-child {
+  border-right: none;
+}
+ 
+.project-tab:hover {
+  background: rgba(255,255,255,0.03);
+}
+ 
+.project-tab.active {
+  background: rgba(255,255,255,0.05);
+  border-bottom: 2px solid #b8a898;
+}
+ 
+.tab-number {
   font-family: monospace;
-  font-size: 0.7rem;
+  font-size: 0.45rem;
   letter-spacing: 0.3em;
+  color: #7a7060;
+}
+ 
+.tab-title {
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #b8a898;
+}
+ 
+.project-tab.active .tab-title {
+  color: #f5f0e8;
+}
+ 
+.tab-blurb {
+  font-family: monospace;
+  font-size: 0.55rem;
+  line-height: 1.5;
+  color: #7a7060;
+  letter-spacing: 0.03em;
+}
+ 
+.project-tab.active .tab-blurb {
+  color: #b8a898;
+}
+ 
+.project-panel {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.project-panel.active {
+  display: flex;
+}
+ 
+.panel-eyebrow {
+  font-family: monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.4em;
+  color: #7a7060;
+}
+ 
+.panel-title {
+  font-family: monospace;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
   color: #f5f0e8;
   font-weight: 400;
-  margin: 0 0 10px 0;
 }
-
-.project-item p {
+ 
+.panel-tagline {
+  font-family: monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: #b8a898;
+}
+ 
+.panel-body {
   font-family: monospace;
   font-size: 0.82rem;
-  line-height: 1.8;
+  line-height: 1.9;
   color: #d4c9b4;
   letter-spacing: 0.03em;
   margin: 0;
+}
+ 
+.panel-section-label {
+  font-family: monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.4em;
+  color: #b8a898;
+  margin-top: 8px;
+}
+ 
+.screenshot-row {
+  display: flex;
+  gap: 10px;
+}
+ 
+.screenshot-placeholder {
+  flex: 1;
+  height: 90px;
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.screenshot-placeholder span {
+  font-family: monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  color: #3a3a3a;
 }
 
 /* ============================================================
