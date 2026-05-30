@@ -170,11 +170,15 @@
         documentation, and client communication. No senior dev to escalate to.
       </p>
  
+      <!-- Lightbox thumbnails -->
       <div class="screenshot-row">
-        <img class="project-screenshot" src="assets/images/teachTubeHomeScreen.png" alt="TeachTube employee home screen" />
-        <img class="project-screenshot" src="assets/images/teachTubeAdminScreen.png" alt="TeachTube admin dashboard" />
-        <img class="project-screenshot" src="assets/images/teachTubeContentScreen.png" alt="TeachTube content detail view" />
+        <img class="project-screenshot" src="assets/images/teachTubeHomeScreen.png" alt="TeachTube employee home screen" onclick="openLightbox(this)" />
+        <img class="project-screenshot" src="assets/images/teachTubeAdminScreen.png" alt="TeachTube admin dashboard" onclick="openLightbox(this)" />
+        <img class="project-screenshot" src="assets/images/teachTubeContentScreen.png" alt="TeachTube content detail view" onclick="openLightbox(this)" />
       </div>
+      <span class="screenshot-hint">[ CLICK TO ENLARGE ]</span>
+ 
+      <a href="https://github.com/REPLACE-WITH-YOUR-REPO-URL" target="_blank" class="resume-btn">[ VIEW ON GITHUB ]</a>
  
       <span class="panel-section-label">THE BUILD</span>
       <p class="panel-body">
@@ -327,6 +331,12 @@
  
   </div>
 </section>
+ 
+<!-- Lightbox overlay -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="" />
+  <span id="lightbox-close">[ CLOSE ]</span>
+</div>
 
 <section id="resume" class="content-panel">
   <div class="panel-inner">
