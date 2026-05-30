@@ -135,123 +135,196 @@
 
 <section id="projects" class="content-panel">
   <div class="panel-inner">
-    <div class="about-layout">
-
-      <div class="about-header">
-        <span class="about-eyebrow">REEL 02 // PROJECTS</span>
-        <h1 class="about-name">PROJECTS</h1>
-        <span class="about-tagline">COBOL · TYPESCRIPT · REACT · C++ · JAVASCRIPT</span>
+ 
+    <!-- Project tab navigation -->
+    <div class="project-nav">
+      <div class="project-tab active" data-project="teachtube">
+        <span class="tab-number">PROJECT 01</span>
+        <span class="tab-title">TEACHTUBE</span>
+        <span class="tab-blurb">SharePoint content hub deployed to 33 KCPS schools</span>
       </div>
-
-      <div class="about-divider"></div>
-
-      <div class="project-item">
-        <h3>KCPS CONTENT HUB</h3>
-        <p>
-          A SharePoint-based knowledge base developed for Kansas City Public Schools 
-          to reduce internal support tickets by centralizing employee resources. Built 
-          custom web parts using TypeScript, React, and the SharePoint Framework (SPFx) 
-          for direct deployment to SharePoint pages.
-        </p>
+      <div class="project-tab" data-project="clearledger">
+        <span class="tab-number">PROJECT 02</span>
+        <span class="tab-title">CLEARLEDGER</span>
+        <span class="tab-blurb">ILE COBOL core banking system on IBM i</span>
       </div>
-
-      <div class="project-item">
-        <h3>COBOL PROGRAMS — PUB400</h3>
-        <p>
-          Currently developing and running COBOL programs live on PUB400 under library
-           ELIJAHM1, building toward a full core banking system in ILE COBOL on IBM i. 
-           Current work spans foundational enterprise programming concepts - fixed-format 
-           data structures, indexed file handling, and the batch processing architecture that 
-           still powers the financial infrastructure of major institutions worldwide. 
-           The end goal is a working system that handles real banking operations: 
-           account management, transaction processing, and ledger balancing - built 
-           the way the industry actually builds it.
-        </p>
+      <div class="project-tab" data-project="portfolio">
+        <span class="tab-number">PROJECT 03</span>
+        <span class="tab-title">THIS PORTFOLIO</span>
+        <span class="tab-blurb">Vanilla HTML/CSS/JS -- silent film aesthetic</span>
       </div>
-
-      <div class="project-item">
-        <h3>ARDUBOY DEVELOPMENT</h3>
-        <p>
-          Programming games and applications for the Arduboy — a credit card sized 
-          open source game system built on Arduino architecture. Working in C++ to 
-          build constrained, efficient programs within tight memory and processing 
-          limitations. A study in doing more with less.
-        </p>
-      </div>
-
-      <div class="project-item">
-        <h3>THIS PORTFOLIO</h3>
-        <p>
-          Built from scratch in vanilla HTML, CSS, and JavaScript. No frameworks, 
-          no libraries, no build tools. Features an animated 1895-era silent film 
-          intro sequence, canvas-based film grain running at 24fps, and a 35mm film 
-          strip navigation system. Hosted on GitHub Pages.
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
-
-    <section id="resume" class="content-panel">
-  <div class="panel-inner">
-    <div class="resume-layout">
-
-      <div class="resume-header">
-        <span class="about-eyebrow">REEL 03 // RESUME</span>
-        <h1 class="about-name">Elijah Millard</h1>
-        <span class="about-tagline">TECHNOLOGY INTERN - KANSAS CITY</span>
-      </div>
-
+ 
+    <!-- TeachTube -->
+    <div class="project-panel active" id="panel-teachtube">
+      <span class="panel-eyebrow">REEL 02 // PROJECT 01</span>
+      <span class="panel-title">TEACHTUBE // KCPS CONTENT HUB</span>
+      <span class="panel-tagline">SHAREPOINT · TYPESCRIPT · REACT · SPFx · IN PRODUCTION</span>
       <div class="about-divider"></div>
-
-      <div class="resume-block">
-        <span class="resume-label">CURRENT ROLE</span>
-        <p class="resume-text">
-          i.c.stars Technology Intern - Building a client-facing content hub for 
-          Kansas City Public Schools, serving 2,100+ district staff across 33 schools.
-        </p>
+ 
+      <p class="panel-body">
+        A SharePoint-based employee knowledge hub built for Kansas City Public Schools, now live and serving
+        2,100+ district staff across 33 schools. I built the initial version as a capstone project at i.c.stars,
+        presented it at the showcase, and was brought on as a W2 contractor by Tricom IT Consulting to take it
+        to production. I was the sole technical lead -- architecture, frontend, service layer, deployment,
+        documentation, and client communication. No senior dev to escalate to.
+      </p>
+ 
+      <div class="screenshot-row">
+        <div class="screenshot-placeholder"><span>[ SCREENSHOT ]</span></div>
+        <div class="screenshot-placeholder"><span>[ SCREENSHOT ]</span></div>
+        <div class="screenshot-placeholder"><span>[ SCREENSHOT ]</span></div>
       </div>
-
-      <div class="about-divider"></div>
-
-      <div class="resume-block">
-        <span class="resume-label">TECHNICAL SKILLS</span>
-        <div class="about-footer">
-          <span class="about-tag">SYSTEMS ANALYSIS</span>
-          <span class="about-tag">TROUBLESHOOTING & DEBUGGING</span>
-          <span class="about-tag">REACT</span>
-          <span class="about-tag">NODE.JS</span>
-          <span class="about-tag">SHAREPOINT</span>
-          <span class="about-tag">COBOL</span>
-          <span class="about-tag">REQUIREMENTS GATHERING</span>
-          <span class="about-tag">TECHNICAL DOCUMENTATION</span>
-        </div>
-      </div>
-
-      <div class="about-divider"></div>
-
-      <div class="resume-block">
-        <span class="resume-label">CERTIFICATIONS & TRAINING</span>
-        <p class="resume-text">COBOL Certification - In Progress</p>
-        <p class="resume-text">AWS Cloud Architect - In Progress</p>
-        <p class="resume-text">i.c.stars Technology Training - Legacy Systems, Web Development, React</p>
-      </div>
-
-      <div class="about-divider"></div>
-
-      <div class="resume-block">
-        <span class="resume-label">RECOGNITION</span>
-        <p class="resume-text">Eagle Scout - Boy Scouts of America</p>
-      </div>
-
-      <div class="about-divider"></div>
-
-      <a href="assets/pdfs/Elijah-Millard-Resume.pdf" download class="resume-btn">
-        [ DOWNLOAD FULL RESUME ]
-      </a>
-
+ 
+      <span class="panel-section-label">THE BUILD</span>
+      <p class="panel-body">
+        The hardest part wasn't the code -- it was the environment. Dataverse normalizes custom column names
+        to lowercase in OData responses, silently. It stores Choice columns as integers, not strings. Published
+        is 126880002. Video is 126880000. Every read and write ran through lookup maps in both directions, and
+        when one was wrong the app either crashed or saved garbage data without telling you.
+      </p>
+      <p class="panel-body">
+        The worst single bug was contentType.toLowerCase is not a function -- a raw integer slipping through
+        the data pipeline into render logic that expected a string. It was happening in minified production
+        code with no line context. I had to reason backwards through the entire pipeline to find it.
+      </p>
+      <p class="panel-body">
+        The tenant storage entity problem was its own chapter. The app reads its Dataverse URL from a
+        SharePoint tenant property at startup -- the right architectural call. But KCPS didn't have a
+        tenant-wide App Catalog configured. PowerShell commands kept returning Unknown Error or Access Denied.
+        The resolution was that their team set the storage entity at a non-standard path, and I updated the
+        fetch to point there. Once both pieces were in place it connected immediately.
+      </p>
+ 
+      <span class="panel-section-label">WHAT I LEARNED</span>
+      <p class="panel-body">
+        Real client environments are not clean. They have constraints made years ago by people who are no
+        longer there. I learned to separate what I can fix from what I have to work around. Some problems
+        needed better code. Some needed someone with the right permissions to run two PowerShell commands.
+        All I could do was make that ask as clear and actionable as possible and wait.
+      </p>
+      <p class="panel-body">
+        The handoff matters as much as the build. I wrote three Word documents -- a staff user guide, an
+        admin user guide, and a full technical reference for the IT team -- plus a developer README. If I
+        handed over a zip file and walked away, TeachTube would have stopped working the first time something
+        needed to change. The documentation is what makes the thing last.
+      </p>
+ 
+      <span class="panel-section-label">WHAT I'D DO DIFFERENTLY</span>
+      <p class="panel-body">
+        Design the Dataverse schema more carefully upfront -- I extended column lengths mid-deployment because
+        SharePoint URLs exceeded the default 100-character limit. Start the permissions conversation in week
+        one. And push harder earlier for a clear go/no-go on the AI policy -- I built the Cohere semantic
+        reranking integration and made it toggleable, which was the right call, but I invested time in a
+        feature that was always going to be disabled.
+      </p>
     </div>
+ 
+    <!-- ClearLedger -->
+    <div class="project-panel" id="panel-clearledger">
+      <span class="panel-eyebrow">REEL 02 // PROJECT 02</span>
+      <span class="panel-title">CLEARLEDGER</span>
+      <span class="panel-tagline">ILE COBOL · IBM i 7.5 · PUB400 · ELIJAHM1</span>
+      <div class="about-divider"></div>
+ 
+      <p class="panel-body">
+        A fully functional core banking system built in ILE COBOL, running live on PUB400 under library
+        ELIJAHM1. Customer management, account management, transaction processing, batch end-of-day
+        processing, statement generation, and a CL menu system that ties it all together. Built the way
+        the industry actually builds it.
+      </p>
+ 
+      <div class="screenshot-row">
+        <div class="screenshot-placeholder"><span>[ SCREEN RECORDING ]</span></div>
+        <div class="screenshot-placeholder"><span>[ SCREENSHOT ]</span></div>
+        <div class="screenshot-placeholder"><span>[ SCREENSHOT ]</span></div>
+      </div>
+ 
+      <span class="panel-section-label">THE BUILD</span>
+      <p class="panel-body">
+        The environment came before the code. Weeks of setup -- creating a PUB400 account, installing IBM
+        Access Client Solutions, learning to navigate a 5250 green screen that hasn't changed since the
+        1980s. The first real milestone was understanding what a library was versus a source file versus a
+        member. That sounds trivial. It wasn't.
+      </p>
+      <p class="panel-body">
+        The editor fought back. SEU, the built-in IBM i source editor, is not like any modern tool. The
+        Enter key doesn't work the way any modern keyboard expects. Adding a line means typing I in the line
+        number column. The first program -- Rock Paper Scissors, not the banking system -- took far longer
+        to type than it should have because the tool itself was the obstacle.
+      </p>
+      <p class="panel-body">
+        The biggest time sink was encoding. VS Code saves in UTF-8. IBM i's COBOL compiler expects EBCDIC.
+        The quote character in each is a different binary value. So every string literal -- every DISPLAY
+        statement, every IF comparison -- came back with Delimiter for literal is not correct errors across
+        the entire file. The compiler was rejecting clean-looking code because of invisible character
+        differences that looked identical on screen. Solving it required understanding CCSID -- coded
+        character set identifiers -- a concept that simply doesn't exist in modern development.
+      </p>
+ 
+      <span class="panel-section-label">THE TECHNICAL DECISIONS</span>
+      <p class="panel-body">
+        Chose ILE COBOL over OPM COBOL because ILE is the modern standard and what employers actually use.
+        Chose CL for the menu system rather than COBOL because CL is purpose-built for job automation and
+        chaining programs on IBM i -- using COBOL there would have been the wrong tool. Chose packed decimal
+        (COMP-3) for all financial data because floating point arithmetic loses pennies. Banks have lost real
+        money to floating point errors. COBOL was designed for the specific problem of handling money
+        accurately at scale, and it still does that better than most alternatives.
+      </p>
+ 
+      <span class="panel-section-label">WHAT CLICKED</span>
+      <p class="panel-body">
+        The first time RPSGAME compiled and ran. Not because Rock Paper Scissors is impressive but because
+        it meant the entire chain worked -- VS Code to IFS to member to compiler to executable -- and the
+        green screen was waiting for input from a real program running on a real IBM i 7.5 system. That was
+        proof of concept for everything that followed.
+      </p>
+      <p class="panel-body">
+        The second was understanding what COMP-3 actually does and why. That's not an academic concept. The
+        moment it clicked it was clear why COBOL still exists -- not nostalgia, but because it solves a real
+        problem better than the alternatives.
+      </p>
+ 
+      <span class="panel-section-label">WHAT I'D DO DIFFERENTLY</span>
+      <p class="panel-body">
+        Write everything in SEU first, directly on the system, before touching VS Code. The encoding problem
+        only existed because of the Windows-to-IBM-i file transfer. SEU produces correctly encoded members
+        by default. The modern tooling workflow is better long term, but not when you're learning the
+        platform and debugging compilation errors at the same time.
+      </p>
+ 
+      <div class="about-divider"></div>
+      <p class="panel-body" style="color: #b8a898;">
+        Available for a live demo on IBM i. Contact me and I will walk you through it.
+      </p>
+    </div>
+ 
+    <!-- This Portfolio -->
+    <div class="project-panel" id="panel-portfolio">
+      <span class="panel-eyebrow">REEL 02 // PROJECT 03</span>
+      <span class="panel-title">THIS PORTFOLIO</span>
+      <span class="panel-tagline">VANILLA HTML · CSS · JAVASCRIPT · GITHUB PAGES</span>
+      <div class="about-divider"></div>
+ 
+      <p class="panel-body">
+        Built from scratch -- no frameworks, no libraries, no build tools. The constraint was intentional.
+        A portfolio about legacy systems and doing more with less should practice what it preaches.
+      </p>
+      <p class="panel-body">
+        The visual design references the 1895 to 1905 era of silent cinema -- specifically the nitrate film
+        stock of the Lumiere Brothers and Edison Manufacturing Company. Film grain runs on a canvas element
+        at 24fps using randomized monochromatic pixel noise. Vertical scratch lines appear on roughly 30%
+        of frames. Flash cuts between sections reference the mechanical snap of a ViewMaster slide advance.
+        The countdown leader renders each number with randomized position jitter and brightness flicker to
+        simulate unstable projection. Monospace typography throughout references telegram and film stamp
+        aesthetics.
+      </p>
+      <p class="panel-body">
+        The intro sequence, the navigation system, the grain, the transitions -- all of it is vanilla JS
+        and CSS, chained together with setTimeout and requestAnimationFrame.
+      </p>
+    </div>
+ 
   </div>
 </section>
 
