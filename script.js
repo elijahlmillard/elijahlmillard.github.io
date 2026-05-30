@@ -156,6 +156,28 @@ function initObserver() {
 }
 
 // ============================================================
+// LIGHTBOX — opens a screenshot fullscreen on click
+// Add these functions at the top level of script.js
+// (outside any if block, so they're globally available)
+// ============================================================
+function openLightbox(img) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightbox.classList.add('open');
+}
+ 
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+ 
+// close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// ============================================================
 // NAV CLICKS — smooth scroll to section on click
 // ============================================================
 function initNav() {
