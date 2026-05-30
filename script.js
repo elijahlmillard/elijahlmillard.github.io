@@ -555,6 +555,20 @@ if (document.getElementById('film-strip')) {
     });
   });
 
+  // ============================================================
+  // PROJECT TABS — switches between TeachTube, ClearLedger,
+  // and Portfolio panels inside the projects section
+  // Add this inside the if (document.getElementById('film-strip')) block
+  // ============================================================
+  document.querySelectorAll('.project-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.project-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.project-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.project).classList.add('active');
+    });
+  });
+
   // show first panel on load
    setTimeout(() => {
     const inner = document.querySelector('#about .panel-inner');
