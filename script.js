@@ -514,7 +514,7 @@ if (document.getElementById('film-strip')) {
   const sectionPhotos = {
     about:      'assets/images/about.jpg',
     projects:   'assets/images/steam_train.jpg',
-    resume:     'assets/images/factory.jpg',
+    work:       'assets/images/factory.jpg',
     contact:    'assets/images/telegraph_key.jpg',
     leadership: 'assets/images/theatre.jpg',
     // business:   'assets/images/streets.jpg',
