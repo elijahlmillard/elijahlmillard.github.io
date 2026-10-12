@@ -6,7 +6,7 @@ Live site: [elijahlmillard.github.io](https://elijahlmillard.github.io)
 
 ## About
 
-This is the personal developer portfolio of Elijah Millard, a technically driven problem solver with strong systems thinking and communication skills. Passionate about understanding complex systems and applying creative precision to technical challenges. Currently looking to enter the world of maintaining and modernizing legacy systems.
+This is the personal developer portfolio of Elijah Millard, a technically driven problem solver with strong systems thinking and communication skills. Passionate about understanding complex systems and applying creative precision to technical challenges. Interested in connecting older technology with modern technology, and in maintaining and modernizing legacy systems.
 
 ---
 
@@ -16,16 +16,15 @@ The portfolio is split into two pages:
 
 **index.html** — The intro sequence. Plays a 1895-era silent film countdown leader, followed by a cinematic introduction sequence revealing the developer's name, photo, and professional summary. First-time visitors see the full sequence. Returning visitors see the leader with an option to skip directly to the portfolio.
 
-**portfolio.html** — The main portfolio. A tabbed interface styled as a 35mm film strip on the left side of the screen. Seven sections, each with its own thematic background photo and a flash cut transition between them.
+**portfolio.html** — The main portfolio. A tabbed interface styled as a 35mm film strip on the left side of the screen. Six sections, each with its own thematic background photo and a flash cut transition between them.
 
 ### Sections
 1. About Me
 2. Projects
-3. Resume
+3. Work
 4. Contact
 5. Leadership
-6. Business
-7. Career Planning
+6. Career Planning
 
 ---
 
@@ -53,20 +52,14 @@ Used to track whether a visitor has completed the full intro sequence. Returning
 ## File Structure
 ```
 elijahlmillard.github.io/
-├── index.html          — intro sequence
-├── portfolio.html      — main portfolio
-├── style.css           — all styles
-├── script.js           — all JavaScript
+├── index.html          - intro sequence
+├── portfolio.html      - main portfolio
+├── style.css           - all styles
+├── script.js           - navigation, transitions, intro logic
+├── js/                 - earlier split of script.js, not loaded by either page
 └── assets/
-    └── images/
-        ├── cover_photo.jpg
-        ├── about.jpg
-        ├── steam_train.jpg
-        ├── factory.jpg
-        ├── telegraph_key.jpg
-        ├── theatre.jpg
-        ├── streets.jpg
-        └── lighthouse.jpg
+    ├── images/         - section backgrounds, cover photo, project screenshots
+    └── videos/         - ClearLedger demo
 ```
 
 ---
